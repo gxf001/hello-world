@@ -1,0 +1,39 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'enviroment to run'
+        required: true
+        default: 'int'
+        type: choice
+        options:
+        - demo
+        - int
+        - canary
+        - prod
+  # push:
+  #   branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: 'true'
+      # run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/laplacelab_test/laplace:$(date +%s)
+
+    - name: build and deploy
+      env:
+        ENV: ${{ inputs.env }}
+      run: |
+          chmod +x $GITHUB_WORKSPACE/deploy/aliyun/aci_deploy.sh
+          $GITHUB_WORKSPACE/deploy/aliyun/aci_deploy.sh

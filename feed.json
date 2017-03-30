@@ -1,8 +1,16 @@
-{
+[{
   "uid": "urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6b",
-  "updateDate": "2016-05-23T22:34:51.0Z",
-  "titleText": "Amazon Developer Blog, Week in Review May 23rd",
-  "mainText": "",
+  "updateDate": "2017-03-28T22:34:51.0Z",
+  "titleText": "Amazon Developer Blog, Week in Review May 28rd",
+  "mainText": "Hi, I am yoyo. , today is a sunny day. Good luck.",
   "streamUrl": "https://developer.amazon.com/public/community/blog/myaudiofile.mp3",
   "redirectionUrl": "https://developer.amazon.com/public/community/blog"
-}
+},
+{
+  "uid": "urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6a",
+  "updateDate": "2017-03-29T22:34:51.0Z",
+  "titleText": "Amazon Developer Blog, Week in Review May 29rd",
+  "mainText": "Good morning, today is a raining day. And have a good day.",
+  "streamUrl": "https://developer.amazon.com/public/community/blog/myaudiofile.mp3",
+  "redirectionUrl": "https://developer.amazon.com/public/community/blog"
+},]

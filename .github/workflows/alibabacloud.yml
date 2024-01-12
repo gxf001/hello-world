@@ -44,7 +44,7 @@ env:
   IMAGE: laplace
   TAG: ${{ github.sha }}
   ACK_CLUSTER_ID: c6de9fb9924214a319eb6d784d8885c5b
-  ACK_DEPLOYMENT_NAME: laplacelab-plugin-service
+  ACK_DEPLOYMENT_NAME: hello-world
 
   ACR_EE_REGISTRY: registry.cn-hangzhou.cr.aliyuncs.com
   ACR_EE_INSTANCE_ID: registry

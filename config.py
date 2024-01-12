@@ -1,9 +1,6 @@
-from singleton import Singleton
-from typing import List
-
 import os
 import json
-
+from singleton import Singleton
 from logger import get_logger
 
 logger = get_logger(__name__)

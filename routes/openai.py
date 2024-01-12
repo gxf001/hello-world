@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 import openai
 from openai import OpenAI
-from config.config import Config
+from config import Config
 
 from logger import get_logger
 

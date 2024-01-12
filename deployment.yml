@@ -33,7 +33,7 @@ spec:
       - name: hello-world
         image: REGISTRY/NAMESPACE/IMAGE:TAG
         ports:
-        - containerPort: 80
+        - containerPort: 8000
           protocol: TCP
         resources:
           requests:

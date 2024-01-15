@@ -13,8 +13,8 @@ router = APIRouter(prefix="/openai")
 @router.get("")
 async def get_openai():
     logger.info("openai begin")
-    client = OpenAI(api_key=Config().openai_api_key, base_url="http://openai-proxy-openai-proxy-dejvykwdsv.us-west-1-vpc.fcapp.run")#"https://openai-proxy-openai-proxy-dejvykwdsv.us-west-1.fcapp.run")
-    # client = OpenAI(api_key=Config().openai_api_key, base_url="https://openai-proxy-openai-proxy-dejvykwdsv.us-west-1.fcapp.run")
+    # client = OpenAI(api_key=Config().openai_api_key, base_url="http://openai-proxy-openai-proxy-dejvykwdsv.us-west-1-vpc.fcapp.run")#"https://openai-proxy-openai-proxy-dejvykwdsv.us-west-1.fcapp.run")
+    client = OpenAI(api_key=Config().openai_api_key, base_url="https://openai-proxy-openai-proxy-dejvykwdsv.us-west-1.fcapp.run")
 # 
     try:
       response = client.chat.completions.create(
@@ -36,8 +36,8 @@ async def get_openai():
       max_tokens=300,
       )
     except Exception as e:
-      logger.error(e)
-      return {"message": "error"}
+      logger.error(f"request error: {e}")
+      return {"message": f"error,{e}"}
       
 
     logger.info(response.choices[0])

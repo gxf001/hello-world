@@ -14,6 +14,10 @@ app = FastAPI()
 def healthz():
     return JSONResponse(content={'healthy': 'true'}, status_code=status.HTTP_200_OK)
 
+@app.get('/')
+def index():
+    return JSONResponse(content={'message': 'ok'}, status_code=status.HTTP_200_OK)
+
 app.include_router(hello)
 app.include_router(world)
 app.include_router(openai)
